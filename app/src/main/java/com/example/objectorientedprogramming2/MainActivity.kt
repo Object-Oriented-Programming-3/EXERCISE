@@ -24,6 +24,14 @@ open class MainActivity : AppCompatActivity() {
         firestore = FirebaseFirestore.getInstance()
         binding.recyclerGridView.adapter = ListAdapterGrid(firestore!!)
         binding.recyclerGridView.layoutManager = GridLayoutManager(this, 2)
+
+        var searchOption = "id"
+        binding.imageButton.setOnClickListener{
+            (binding.recyclerGridView.adapter as ListAdapterGrid).search(binding.searchWord.text.toString(),searchOption)
+        }
+
+
+//        }
     }
 
 
@@ -38,4 +46,4 @@ open class MainActivity : AppCompatActivity() {
 //                layoutManager = listManager
 //                adapter = listAdapter
 //        }
-    }
+}

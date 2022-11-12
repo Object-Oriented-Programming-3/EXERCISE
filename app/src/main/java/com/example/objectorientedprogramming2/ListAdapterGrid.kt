@@ -27,6 +27,21 @@ class ListAdapterGrid(private var firestore: FirebaseFirestore): RecyclerView.Ad
             }
     }
 
+    fun search(searchWord: String, option : String) {
+        firestore.collection("Exercise")
+            ?.addSnapshotListener{ querySnapshot, _ ->
+                exercise.clear()
+
+                for(snapshot in querySnapshot!!.documents) {
+                    if(snapshot.getString(option)!!.contains(searchWord)){
+                        var item = snapshot.toObject(Exercise::class.java)
+                        exercise.add(item!!)
+                    }
+                }
+                notifyDataSetChanged()
+        }
+    }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
 //        var view =
@@ -54,8 +69,14 @@ class ListAdapterGrid(private var firestore: FirebaseFirestore): RecyclerView.Ad
     class Holder(private val binding : ListExerciseBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(exercise : Exercise) {
             binding.txtName.text = exercise.name
+
         }
     }
+
+
+
+
+
 
 
 }
