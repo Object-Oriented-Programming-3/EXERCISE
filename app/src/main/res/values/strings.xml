@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ObjectOrientedProgramming3</string>
+    <string name="txt_name">렛풀다운</string>
+    <string name="chest">가슴</string>
+    <string name="txt_where">어느 부위를</string>
+    <string name="txt_exercise">운동하고 싶나요?</string>
+    <string name="txt_rec">추천 검색어</string>
+    <string name="lower">하체</string>
+    <string name="shoulder">어깨</string>
+    <string name="arm">팔</string>
+    <string name="back">등</string>
+    <string name="abs">복근</string>
+</resources>

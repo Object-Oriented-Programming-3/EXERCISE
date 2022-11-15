@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/frameLayout2"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".SearchMainFragment">
+
+
+<TextView
+    android:id="@+id/txt_1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="40dp"
+    android:layout_marginTop="100dp"
+    android:text="@string/txt_where"
+    android:textColor="#256FFF"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/txt_2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="40dp"
+    android:layout_marginTop="5dp"
+    android:text="@string/txt_exercise"
+    android:textColor="#256FFF"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/txt_1" />
+
+<TextView
+    android:id="@+id/txt_rec"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="40dp"
+    android:layout_marginTop="40dp"
+    android:layout_marginBottom="40dp"
+    android:text="@string/txt_rec"
+    android:textColor="#256FFF"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toTopOf="@+id/but_chest"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+<LinearLayout
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="40dp"
+    android:layout_marginTop="50dp"
+    android:layout_marginEnd="40dp"
+    android:orientation="horizontal"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/txt_2">
+
+    <EditText
+        android:id="@+id/searchWord"
+        android:layout_width="268dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="검색어를 입력해주세요."
+        android:inputType="text" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        app:srcCompat="@drawable/ic_baseline_search_24" />
+</LinearLayout>
+
+<Button
+    android:id="@+id/but_chest"
+    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="52dp"
+    android:layout_marginTop="100dp"
+    android:text="@string/chest"
+    android:textColor="#2962FF"
+    app:cornerRadius="10dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+    app:strokeColor="@color/white" />
+
+<Button
+    android:id="@+id/but_back"
+    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="52dp"
+    android:layout_marginTop="24dp"
+    android:text="@string/back"
+    android:textColor="#2962FF"
+    app:background="@android:color/transparent"
+    app:cornerRadius="10dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/but_chest" />
+
+<Button
+    android:id="@+id/but_lower"
+    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="52dp"
+    android:layout_marginTop="16dp"
+    android:text="@string/lower"
+    android:textColor="#2962FF"
+    app:background="@android:color/transparent"
+    app:cornerRadius="10dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/but_back" />
+
+<Button
+    android:id="@+id/but_abs"
+    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="100dp"
+    android:layout_marginEnd="52dp"
+    android:text="@string/abs"
+    android:textColor="#2962FF"
+    app:background="@android:color/transparent"
+    app:cornerRadius="10dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+<Button
+    android:id="@+id/but_arm"
+    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp"
+    android:layout_marginEnd="52dp"
+    android:text="@string/arm"
+    android:textColor="#2962FF"
+    app:background="@android:color/transparent"
+    app:cornerRadius="10dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/but_abs" />
+
+<Button
+    android:id="@+id/but_shoulder"
+    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="52dp"
+    android:text="@string/shoulder"
+    android:textColor="#2962FF"
+    app:background="@android:color/transparent"
+    app:cornerRadius="10dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/but_arm" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
