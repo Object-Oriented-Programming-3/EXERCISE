@@ -66,7 +66,7 @@ tools:context=".SearchMainFragment">
         android:layout_width="268dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:hint="검색어를 입력해주세요."
+        android:hint="운동부위를 입력해주세요."
         android:inputType="text" />
 
     <ImageButton
