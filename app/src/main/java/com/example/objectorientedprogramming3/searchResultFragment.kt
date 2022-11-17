@@ -15,6 +15,7 @@ class searchResultFragment : Fragment() {
 
     private var binding : FragmentSearchResultBinding ? = null
     private var firestore : FirebaseFirestore? = null
+    private var exercise: ArrayList<Exercise> = arrayListOf()
 
 
     override fun onCreateView(
@@ -35,22 +36,42 @@ class searchResultFragment : Fragment() {
         binding?.recyclerGridView?.adapter = ListAdapterGrid(firestore!!)
         binding?.recyclerGridView?.layoutManager = GridLayoutManager(activity, 2)
 
+        var firstSearchOption = "id"
         var searchOption = "name"
+        var subOption = ""
+
         binding?.spinner?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 when (binding?.spinner?.getItemAtPosition(position)) {
-                    "운동명" -> {
-                        searchOption = "name"
-                    }
                     "운동부위" -> {
-                        searchOption = "id"
+                        subOption = "all"
                     }
-                }
-            }
+                    "가슴" -> {
+                        subOption = "가슴"
+                    }
+                    "등" -> {
+                        subOption = "등"
+                    }
+                    "복근" -> {
+                        subOption = "복근"
+                    }
+                    "어깨" -> {
+                        subOption = "어깨"
+                    }
+                    "팔" -> {
+                        subOption = "팔"
+                    }
+                    "하체" -> {
+                        subOption = "하체"
+                    }
 
+                }
+                (binding?.recyclerGridView?.adapter as ListAdapterGrid).firstSearch(firstSearchOption,subOption)
+            }
         }
+
 
         binding?.imageButton?.setOnClickListener{
             (binding?.recyclerGridView?.adapter as ListAdapterGrid).search(binding?.searchWord?.text.toString(),searchOption)
