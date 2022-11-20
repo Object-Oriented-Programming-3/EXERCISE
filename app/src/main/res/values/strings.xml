@@ -10,4 +10,6 @@
     <string name="arm">팔</string>
     <string name="back">등</string>
     <string name="abs">복근</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
