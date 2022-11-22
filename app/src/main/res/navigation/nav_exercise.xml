@@ -11,26 +11,26 @@
         android:label="fragment_entry"
         tools:layout="@layout/fragment_entry" >
         <action
-            android:id="@+id/action_entryFragment_to_searchMainFragment"
-            app:destination="@id/searchMainFragment" />
-        <action
             android:id="@+id/action_entryFragment_to_loginFragment2"
             app:destination="@id/loginFragment2" />
+        <action
+            android:id="@+id/action_entryFragment_to_searchResultFragment"
+            app:destination="@id/searchResultFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchMainFragment"
         android:name="com.example.objectorientedprogramming3.SearchMainFragment"
         android:label="fragment_search_main"
-        tools:layout="@layout/fragment_search_main" >
-        <action
-            android:id="@+id/action_searchMainFragment_to_searchResultFragment"
-            app:destination="@id/searchResultFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_search_main" />
     <fragment
         android:id="@+id/searchResultFragment"
         android:name="com.example.objectorientedprogramming3.searchResultFragment"
         android:label="fragment_search_result"
-        tools:layout="@layout/fragment_search_result" />
+        tools:layout="@layout/fragment_search_result" >
+        <action
+            android:id="@+id/action_searchResultFragment_to_searchDetailFragment"
+            app:destination="@id/searchDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment2"
         android:name="com.example.objectorientedprogramming3.auth.LoginFragment"
@@ -52,4 +52,9 @@
             android:id="@+id/action_signUpFragment2_to_entryFragment"
             app:destination="@id/entryFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/searchDetailFragment"
+        android:name="com.example.objectorientedprogramming3.SearchDetailFragment"
+        android:label="fragment_search_detail"
+        tools:layout="@layout/fragment_search_detail" />
 </navigation>

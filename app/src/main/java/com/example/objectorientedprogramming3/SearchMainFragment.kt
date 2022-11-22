@@ -41,28 +41,7 @@ class SearchMainFragment : Fragment() {
 
         var searchOption = "id"
 
-        binding?.imageButton?.setOnClickListener{
-            findNavController().navigate(R.id.action_searchMainFragment_to_searchResultFragment)
-        }
 
-        binding?.butAbs?.setOnClickListener{
-            findNavController().navigate(R.id.action_searchMainFragment_to_searchResultFragment)
-        }
-        binding?.butArm?.setOnClickListener{
-            findNavController().navigate(R.id.action_searchMainFragment_to_searchResultFragment)
-        }
-        binding?.butBack?.setOnClickListener{
-            findNavController().navigate(R.id.action_searchMainFragment_to_searchResultFragment)
-        }
-        binding?.butChest?.setOnClickListener{
-            findNavController().navigate(R.id.action_searchMainFragment_to_searchResultFragment)
-        }
-        binding?.butLower?.setOnClickListener{
-            findNavController().navigate(R.id.action_searchMainFragment_to_searchResultFragment)
-        }
-        binding?.butShoulder?.setOnClickListener{
-            findNavController().navigate(R.id.action_searchMainFragment_to_searchResultFragment)
-        }
     }
 
     override fun onDestroyView() {

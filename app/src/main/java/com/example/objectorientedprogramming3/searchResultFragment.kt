@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.objectorientedprogramming3.databinding.FragmentSearchResultBinding
 import com.google.firebase.firestore.FirebaseFirestore
@@ -76,6 +77,8 @@ class searchResultFragment : Fragment() {
         binding?.imageButton?.setOnClickListener{
             (binding?.recyclerGridView?.adapter as ListAdapterGrid).search(binding?.searchWord?.text.toString(),searchOption)
         }
+
+
     }
 
     override fun onDestroyView() {

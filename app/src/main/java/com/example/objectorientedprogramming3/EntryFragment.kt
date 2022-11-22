@@ -31,7 +31,7 @@ class EntryFragment : Fragment() {
 
 
         binding?.btnSearch?.setOnClickListener{
-            findNavController().navigate(R.id.action_entryFragment_to_searchMainFragment)
+            findNavController().navigate(R.id.action_entryFragment_to_searchResultFragment)
         }
     }
 }

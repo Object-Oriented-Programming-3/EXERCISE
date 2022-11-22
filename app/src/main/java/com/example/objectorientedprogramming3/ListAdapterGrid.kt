@@ -1,8 +1,14 @@
 package com.example.objectorientedprogramming3
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.core.os.bundleOf
+import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -83,6 +89,7 @@ class ListAdapterGrid(private var firestore: FirebaseFirestore): RecyclerView.Ad
 //        var viewHolder = (holder as ViewHolder).itemView
 //        viewHolder.txt_name.text = exercise[position].name
         holder.bind(exercise[position])
+//        }
     }
 
     override fun getItemCount(): Int {
@@ -97,7 +104,30 @@ class ListAdapterGrid(private var firestore: FirebaseFirestore): RecyclerView.Ad
                 .fitCenter()
                 .apply(RequestOptions().override(300,300))
                 .into(binding.imageView)
+
+
+            binding.imageView.setOnClickListener{
+                var fragment: Fragment = SearchDetailFragment()
+                var bundle: Bundle = Bundle()
+                bundle.putString("name",exercise.name)
+                bundle.putString("imageUrl",exercise.imageUrl)
+                bundle.putString("set",exercise.set)
+                bundle.putString("cnt",exercise.cnt)
+                bundle.putString("info",exercise.info)
+                bundle.putString("info1",exercise.info1)
+                bundle.putString("info2",exercise.info2)
+                bundle.putString("info3",exercise.info3)
+                bundle.putString("info4",exercise.info4)
+                bundle.putString("infoNote1",exercise.infoNote1)
+
+
+                fragment.arguments=bundle
+
+                Navigation.findNavController(binding.root).navigate(R.id.action_searchResultFragment_to_searchDetailFragment,bundle)
+            }
+
         }
+
 
 
 
