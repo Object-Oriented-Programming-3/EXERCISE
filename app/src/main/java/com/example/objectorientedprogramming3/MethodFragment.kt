@@ -10,7 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.objectorientedprogramming3.databinding.FragmentMethodBinding
 
 
-class methodFragment : Fragment() {
+class MethodFragment : Fragment() {
 
     var binding: FragmentMethodBinding? = null
 
@@ -28,7 +28,22 @@ class methodFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.btnFreeweight?.setOnClickListener{
-            findNavController().navigate(R.id.action_methodFragment_to_listFragment)
+            var bundle: Bundle = Bundle()
+            var method = "프리웨이트"
+            bundle.putString("method",method)
+            findNavController().navigate(R.id.action_methodFragment_to_listFragment,bundle)
+        }
+        binding?.btnMachine?.setOnClickListener{
+            var bundle: Bundle = Bundle()
+            var method = "머신운동"
+            bundle.putString("method",method)
+            findNavController().navigate(R.id.action_methodFragment_to_listFragment,bundle)
+        }
+        binding?.btnAll?.setOnClickListener{
+            var bundle: Bundle = Bundle()
+            var method = "전체"
+            bundle.putString("method",method)
+            findNavController().navigate(R.id.action_methodFragment_to_listFragment,bundle)
         }
 
 

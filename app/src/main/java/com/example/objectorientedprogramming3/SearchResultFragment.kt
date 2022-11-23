@@ -12,7 +12,7 @@ import com.example.objectorientedprogramming3.databinding.FragmentSearchResultBi
 import com.google.firebase.firestore.FirebaseFirestore
 
 
-class searchResultFragment : Fragment() {
+class SearchResultFragment : Fragment() {
 
     private var binding : FragmentSearchResultBinding ? = null
     private var firestore : FirebaseFirestore? = null

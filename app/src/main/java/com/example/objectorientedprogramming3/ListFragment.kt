@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.objectorientedprogramming3.databinding.FragmentListBinding
 import com.google.firebase.firestore.FirebaseFirestore
 
-class listFragment : Fragment() {
+class ListFragment : Fragment() {
 
     var binding : FragmentListBinding? = null
 
@@ -36,12 +36,26 @@ class listFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        var method = arguments?.getString("method")
 
-        binding?.recyclerGridView?.adapter = ListAdapterGrid(firestore!!)
-        binding?.recyclerGridView?.layoutManager = GridLayoutManager(activity, 2)
+        //전체
+        if (method == "전체"){
+            binding?.recyclerGridView?.adapter = ListAdapterGrid(firestore!!)
+            binding?.recyclerGridView?.layoutManager = GridLayoutManager(activity, 2)
+            binding?.txtMethodName?.text = "모든 운동을"
+        }
+        //머신운동 & 프리웨이트
+        else{
+            binding?.recyclerGridView?.adapter = ListAdapterGridMethod(firestore!!,method!!)
+            binding?.recyclerGridView?.layoutManager = GridLayoutManager(activity, 2)
+            binding?.txtMethodName?.text = method
+        }
 
         binding?.btnRoutine?.setOnClickListener{
-            findNavController().navigate(R.id.action_listFragment_to_routineFragment)
+            var bundle: Bundle = Bundle()
+            var option = method
+            bundle.putString("option",option)
+            findNavController().navigate(R.id.action_listFragment_to_routineFragment,bundle)
 
         }
     }

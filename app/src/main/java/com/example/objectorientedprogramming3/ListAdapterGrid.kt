@@ -76,6 +76,52 @@ class ListAdapterGrid(private var firestore: FirebaseFirestore): RecyclerView.Ad
             }
     }
 
+    fun level_1(){
+        firestore.collection("Exercise")
+            .addSnapshotListener { querySnapshot, _ ->
+                // ArrayList 비워줌
+                exercise.clear()
+
+                for (snapshot in querySnapshot!!.documents) {
+                    if(snapshot.getString("level") == "초보자"){
+                        var item = snapshot.toObject(Exercise::class.java)
+                        exercise.add(item!!)
+                    }
+                }
+                notifyDataSetChanged()
+            }
+    }
+    fun level_2(){
+        firestore.collection("Exercise")
+            .addSnapshotListener { querySnapshot, _ ->
+                // ArrayList 비워줌
+                exercise.clear()
+
+                for (snapshot in querySnapshot!!.documents) {
+                    if(snapshot.getString("level") == "중급자"){
+                        var item = snapshot.toObject(Exercise::class.java)
+                        exercise.add(item!!)
+                    }
+                }
+                notifyDataSetChanged()
+            }
+    }
+    fun level_3(){
+        firestore.collection("Exercise")
+            .addSnapshotListener { querySnapshot, _ ->
+                // ArrayList 비워줌
+                exercise.clear()
+
+                for (snapshot in querySnapshot!!.documents) {
+                    if(snapshot.getString("level") == "숙련자"){
+                        var item = snapshot.toObject(Exercise::class.java)
+                        exercise.add(item!!)
+                    }
+                }
+                notifyDataSetChanged()
+            }
+    }
+
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
@@ -124,7 +170,12 @@ class ListAdapterGrid(private var firestore: FirebaseFirestore): RecyclerView.Ad
                 fragment.arguments=bundle
 
                 Navigation.findNavController(binding.root).navigate(R.id.action_searchResultFragment_to_searchDetailFragment,bundle)
+                //Navigation.findNavController(binding.root).navigate(R.id.action_listFragment_to_searchDetailFragment,bundle)
+                //Navigation.findNavController(binding.root).navigate(R.id.action_routineFragment_to_searchDetailFragment,bundle)
+
+
             }
+
 
         }
 

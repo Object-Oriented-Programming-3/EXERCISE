@@ -11,4 +11,5 @@ open class Exercise(
     val info2 : String = "",
     val info3 : String = "",
     val info4 : String = "",
-    val infoNote1 : String = "")
+    val infoNote1 : String = "",
+    val level : String = "")

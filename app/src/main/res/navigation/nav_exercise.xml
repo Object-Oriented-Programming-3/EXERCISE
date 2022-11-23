@@ -30,7 +30,7 @@
         tools:layout="@layout/fragment_search_main" />
     <fragment
         android:id="@+id/searchResultFragment"
-        android:name="com.example.objectorientedprogramming3.searchResultFragment"
+        android:name="com.example.objectorientedprogramming3.SearchResultFragment"
         android:label="fragment_search_result"
         tools:layout="@layout/fragment_search_result" >
         <action
@@ -74,15 +74,18 @@
     </fragment>
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.example.objectorientedprogramming3.listFragment"
+        android:name="com.example.objectorientedprogramming3.ListFragment"
         android:label="listFragment" >
         <action
             android:id="@+id/action_listFragment_to_routineFragment"
             app:destination="@id/routineFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_searchDetailFragment"
+            app:destination="@id/searchDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/methodFragment"
-        android:name="com.example.objectorientedprogramming3.methodFragment"
+        android:name="com.example.objectorientedprogramming3.MethodFragment"
         android:label="methodFragment" >
         <action
             android:id="@+id/action_methodFragment_to_listFragment"
@@ -90,6 +93,10 @@
     </fragment>
     <fragment
         android:id="@+id/routineFragment"
-        android:name="com.example.objectorientedprogramming3.routineFragment"
-        android:label="routineFragment" />
+        android:name="com.example.objectorientedprogramming3.RoutineFragment"
+        android:label="routineFragment" >
+        <action
+            android:id="@+id/action_routineFragment_to_searchDetailFragment"
+            app:destination="@id/searchDetailFragment" />
+    </fragment>
 </navigation>
