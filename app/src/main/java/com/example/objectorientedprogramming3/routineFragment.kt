@@ -38,6 +38,8 @@ class routineFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        var option = "method"
+
         binding?.recyclerRoutine?.adapter = ListAdapterGrid(firestore!!)
         binding?.recyclerRoutine?.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
@@ -46,6 +48,10 @@ class routineFragment : Fragment() {
 
         binding?.recyclerRoutine3?.adapter = ListAdapterGrid(firestore!!)
         binding?.recyclerRoutine3?.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+
+        //(binding?.recyclerRoutine?.adapter as ListAdapterScroll).search(option)
+
+
     }
 
 }

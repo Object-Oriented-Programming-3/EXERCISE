@@ -42,6 +42,7 @@ class listFragment : Fragment() {
 
         binding?.btnRoutine?.setOnClickListener{
             findNavController().navigate(R.id.action_listFragment_to_routineFragment)
+
         }
     }
 
