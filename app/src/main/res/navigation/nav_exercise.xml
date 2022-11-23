@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_entryFragment_to_searchResultFragment"
             app:destination="@id/searchResultFragment" />
+        <action
+            android:id="@+id/action_entryFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchMainFragment"
@@ -57,4 +60,13 @@
         android:name="com.example.objectorientedprogramming3.SearchDetailFragment"
         android:label="fragment_search_detail"
         tools:layout="@layout/fragment_search_detail" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.objectorientedprogramming3.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
+    </fragment>
 </navigation>
