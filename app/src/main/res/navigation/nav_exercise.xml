@@ -11,29 +11,29 @@
         android:label="fragment_entry"
         tools:layout="@layout/fragment_entry" >
         <action
-            android:id="@+id/action_entryFragment_to_searchMainFragment"
-            app:destination="@id/searchMainFragment" />
-        <action
             android:id="@+id/action_entryFragment_to_loginFragment2"
             app:destination="@id/loginFragment2" />
         <action
-            android:id="@+id/action_entryFragment_to_methodFragment"
-            app:destination="@id/methodFragment" />
+            android:id="@+id/action_entryFragment_to_searchResultFragment"
+            app:destination="@id/searchResultFragment" />
+        <action
+            android:id="@+id/action_entryFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchMainFragment"
         android:name="com.example.objectorientedprogramming3.SearchMainFragment"
         android:label="fragment_search_main"
-        tools:layout="@layout/fragment_search_main" >
-        <action
-            android:id="@+id/action_searchMainFragment_to_searchResultFragment"
-            app:destination="@id/searchResultFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_search_main" />
     <fragment
         android:id="@+id/searchResultFragment"
         android:name="com.example.objectorientedprogramming3.searchResultFragment"
         android:label="fragment_search_result"
-        tools:layout="@layout/fragment_search_result" />
+        tools:layout="@layout/fragment_search_result" >
+        <action
+            android:id="@+id/action_searchResultFragment_to_searchDetailFragment"
+            app:destination="@id/searchDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment2"
         android:name="com.example.objectorientedprogramming3.auth.LoginFragment"
@@ -56,26 +56,17 @@
             app:destination="@id/entryFragment" />
     </fragment>
     <fragment
-        android:id="@+id/methodFragment"
-        android:name="com.example.objectorientedprogramming3.methodFragment"
-        android:label="fragment_method"
-        tools:layout="@layout/fragment_method" >
-        <action
-            android:id="@+id/action_methodFragment_to_listFragment"
-            app:destination="@id/listFragment" />
-    </fragment>
+        android:id="@+id/searchDetailFragment"
+        android:name="com.example.objectorientedprogramming3.SearchDetailFragment"
+        android:label="fragment_search_detail"
+        tools:layout="@layout/fragment_search_detail" />
     <fragment
-        android:id="@+id/listFragment"
-        android:name="com.example.objectorientedprogramming3.listFragment"
-        android:label="fragment_list"
-        tools:layout="@layout/fragment_list" >
+        android:id="@+id/settingsFragment"
+        android:name="com.example.objectorientedprogramming3.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
         <action
-            android:id="@+id/action_listFragment_to_routineFragment"
-            app:destination="@id/routineFragment" />
+            android:id="@+id/action_settingsFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
     </fragment>
-    <fragment
-        android:id="@+id/routineFragment"
-        android:name="com.example.objectorientedprogramming3.routineFragment"
-        android:label="fragment_routine"
-        tools:layout="@layout/fragment_routine" />
 </navigation>
