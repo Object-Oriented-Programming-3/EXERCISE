@@ -67,62 +67,10 @@ class ListAdapterGrid(private var firestore: FirebaseFirestore): RecyclerView.Ad
                         var item = snapshot.toObject(Exercise::class.java)
                         exercise.add(item!!)
                     }
-//                    if(snapshot.getString(option)!!.contains(searchWord)){
-//                        var item = snapshot.toObject(Exercise::class.java)
-//                        exercise.add(item!!)
-//                    }
                 }
                 notifyDataSetChanged()
             }
     }
-
-    fun level_1(){
-        firestore.collection("Exercise")
-            .addSnapshotListener { querySnapshot, _ ->
-                // ArrayList 비워줌
-                exercise.clear()
-
-                for (snapshot in querySnapshot!!.documents) {
-                    if(snapshot.getString("level") == "초보자"){
-                        var item = snapshot.toObject(Exercise::class.java)
-                        exercise.add(item!!)
-                    }
-                }
-                notifyDataSetChanged()
-            }
-    }
-    fun level_2(){
-        firestore.collection("Exercise")
-            .addSnapshotListener { querySnapshot, _ ->
-                // ArrayList 비워줌
-                exercise.clear()
-
-                for (snapshot in querySnapshot!!.documents) {
-                    if(snapshot.getString("level") == "중급자"){
-                        var item = snapshot.toObject(Exercise::class.java)
-                        exercise.add(item!!)
-                    }
-                }
-                notifyDataSetChanged()
-            }
-    }
-    fun level_3(){
-        firestore.collection("Exercise")
-            .addSnapshotListener { querySnapshot, _ ->
-                // ArrayList 비워줌
-                exercise.clear()
-
-                for (snapshot in querySnapshot!!.documents) {
-                    if(snapshot.getString("level") == "숙련자"){
-                        var item = snapshot.toObject(Exercise::class.java)
-                        exercise.add(item!!)
-                    }
-                }
-                notifyDataSetChanged()
-            }
-    }
-
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
 
@@ -132,10 +80,7 @@ class ListAdapterGrid(private var firestore: FirebaseFirestore): RecyclerView.Ad
 
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-//        var viewHolder = (holder as ViewHolder).itemView
-//        viewHolder.txt_name.text = exercise[position].name
         holder.bind(exercise[position])
-//        }
     }
 
     override fun getItemCount(): Int {
@@ -151,7 +96,6 @@ class ListAdapterGrid(private var firestore: FirebaseFirestore): RecyclerView.Ad
                 .apply(RequestOptions().override(300,300))
                 .into(binding.imageView)
 
-
             binding.imageView.setOnClickListener{
                 var fragment: Fragment = SearchDetailFragment()
                 var bundle: Bundle = Bundle()
@@ -166,23 +110,10 @@ class ListAdapterGrid(private var firestore: FirebaseFirestore): RecyclerView.Ad
                 bundle.putString("info4",exercise.info4)
                 bundle.putString("infoNote1",exercise.infoNote1)
 
-
                 fragment.arguments=bundle
 
                 Navigation.findNavController(binding.root).navigate(R.id.action_searchResultFragment_to_searchDetailFragment,bundle)
-                //Navigation.findNavController(binding.root).navigate(R.id.action_listFragment_to_searchDetailFragment,bundle)
-                //Navigation.findNavController(binding.root).navigate(R.id.action_routineFragment_to_searchDetailFragment,bundle)
-
-
             }
-
-
         }
-
-
-
-
     }
-
-
 }

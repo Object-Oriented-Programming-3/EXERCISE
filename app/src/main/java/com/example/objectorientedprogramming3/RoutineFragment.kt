@@ -38,44 +38,39 @@ class RoutineFragment : Fragment() {
 
         var option = arguments?.getString("option")
 
+        var bundle1: Bundle = Bundle()
+        var level1 = "초보자"
+        bundle1.putString("level",level1)
+        var bundle2: Bundle = Bundle()
+        var level2 = "중급자"
+        bundle2.putString("level",level2)
+        var bundle3: Bundle = Bundle()
+        var level3 = "숙련자"
+        bundle3.putString("level",level3)
+
+        //초보자
+        binding?.recyclerRoutine?.adapter = ListAdapterGridScroll(firestore!!,option!!)
+        (binding?.recyclerRoutine?.adapter as ListAdapterGridScroll).level(option!!,bundle1)
+        binding?.recyclerRoutine?.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+
+        //중급자
+        binding?.recyclerRoutine2?.adapter = ListAdapterGridScroll(firestore!!,option!!)
+        (binding?.recyclerRoutine2?.adapter as ListAdapterGridScroll).level(option!!,bundle2)
+        binding?.recyclerRoutine2?.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+
+        //숙련자
+        binding?.recyclerRoutine3?.adapter = ListAdapterGridScroll(firestore!!,option!!)
+        (binding?.recyclerRoutine3?.adapter as ListAdapterGridScroll).level(option!!,bundle3)
+        binding?.recyclerRoutine3?.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+
+
         if (option == "전체"){
             binding?.txtRoutine?.text = "전체 운동 루틴"
         }
         else{
             binding?.txtRoutine?.text = option + " 루틴"
         }
-
-        //머신운동 & 프리웨이트
-        binding?.recyclerRoutine?.adapter = ListAdapterGridMethod(firestore!!,option!!)
-        (binding?.recyclerRoutine?.adapter as ListAdapterGridMethod).level_1(option!!)
-        binding?.recyclerRoutine?.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-
-        binding?.recyclerRoutine2?.adapter = ListAdapterGridMethod(firestore!!,option!!)
-        (binding?.recyclerRoutine2?.adapter as ListAdapterGridMethod).level_2(option!!)
-        binding?.recyclerRoutine2?.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-
-        binding?.recyclerRoutine3?.adapter = ListAdapterGridMethod(firestore!!,option!!)
-        (binding?.recyclerRoutine3?.adapter as ListAdapterGridMethod).level_3(option!!)
-        binding?.recyclerRoutine3?.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-
-        //전체운동
-        binding?.recyclerRoutine?.adapter = ListAdapterGrid(firestore!!)
-        (binding?.recyclerRoutine?.adapter as ListAdapterGrid).level_1()
-        binding?.recyclerRoutine?.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-
-        binding?.recyclerRoutine2?.adapter = ListAdapterGrid(firestore!!)
-        (binding?.recyclerRoutine2?.adapter as ListAdapterGrid).level_2()
-        binding?.recyclerRoutine2?.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-
-        binding?.recyclerRoutine3?.adapter = ListAdapterGrid(firestore!!)
-        (binding?.recyclerRoutine3?.adapter as ListAdapterGrid).level_3()
-        binding?.recyclerRoutine3?.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-
-        //(binding?.recyclerRoutine?.adapter as ListAdapterScroll).search(option)
-
-
     }
-
 }
 
 

@@ -11,7 +11,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.objectorientedprogramming3.databinding.ListExerciseBinding
 import com.google.firebase.firestore.FirebaseFirestore
 
-class ListAdapterGridMethod(private var firestore: FirebaseFirestore, var method: String): RecyclerView.Adapter<ListAdapterGridMethod.Holder>() {
+class ListAdapterGridScroll(private var firestore: FirebaseFirestore, var method: String): RecyclerView.Adapter<ListAdapterGridScroll.Holder>() {
 
     var exercise: ArrayList<Exercise> = arrayListOf()
 
@@ -27,6 +27,27 @@ class ListAdapterGridMethod(private var firestore: FirebaseFirestore, var method
                         exercise.add(item!!)
                     }
                     if(method == "전체"){
+                        var item = snapshot.toObject(Exercise::class.java)
+                        exercise.add(item!!)
+                    }
+                }
+                notifyDataSetChanged()
+            }
+    }
+
+    fun level(option:String, bundle: Bundle){
+        firestore.collection("Exercise")
+            .addSnapshotListener { querySnapshot, _ ->
+                exercise.clear()
+
+                var level = bundle.getString("level")
+
+                for (snapshot in querySnapshot!!.documents) {
+                    if(snapshot.getString("level") == level && option == "전체"){
+                        var item = snapshot.toObject(Exercise::class.java)
+                        exercise.add(item!!)
+                    }
+                    if(snapshot.getString("level") == level && snapshot.getString("method") == option){
                         var item = snapshot.toObject(Exercise::class.java)
                         exercise.add(item!!)
                     }
@@ -57,7 +78,6 @@ class ListAdapterGridMethod(private var firestore: FirebaseFirestore, var method
                 .apply(RequestOptions().override(300, 300))
                 .into(binding.imageView)
 
-
             binding.imageView.setOnClickListener {
                 var fragment: Fragment = SearchDetailFragment()
                 var bundle: Bundle = Bundle()
@@ -73,10 +93,9 @@ class ListAdapterGridMethod(private var firestore: FirebaseFirestore, var method
                 bundle.putString("infoNote1", exercise.infoNote1)
 
                 fragment.arguments = bundle
-                Navigation.findNavController(binding.root).navigate(R.id.action_listFragment_to_searchDetailFragment, bundle)
 
+                Navigation.findNavController(binding.root).navigate(R.id.action_routineFragment_to_searchDetailFragment, bundle)
             }
-
         }
     }
 }

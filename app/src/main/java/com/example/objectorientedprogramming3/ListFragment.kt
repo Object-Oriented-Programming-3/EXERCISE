@@ -38,25 +38,21 @@ class ListFragment : Fragment() {
 
         var method = arguments?.getString("method")
 
-        //전체
+        binding?.recyclerGridView?.adapter = ListAdapterGridMethod(firestore!!,method!!)
+        binding?.recyclerGridView?.layoutManager = GridLayoutManager(activity, 2)
+
         if (method == "전체"){
-            binding?.recyclerGridView?.adapter = ListAdapterGrid(firestore!!)
-            binding?.recyclerGridView?.layoutManager = GridLayoutManager(activity, 2)
             binding?.txtMethodName?.text = "모든 운동을"
         }
-        //머신운동 & 프리웨이트
         else{
-            binding?.recyclerGridView?.adapter = ListAdapterGridMethod(firestore!!,method!!)
-            binding?.recyclerGridView?.layoutManager = GridLayoutManager(activity, 2)
             binding?.txtMethodName?.text = method
         }
 
         binding?.btnRoutine?.setOnClickListener{
             var bundle: Bundle = Bundle()
-            var option = method
+            var option = method //method = 머신운동 & 프리웨이트 & 전체
             bundle.putString("option",option)
             findNavController().navigate(R.id.action_listFragment_to_routineFragment,bundle)
-
         }
     }
 
