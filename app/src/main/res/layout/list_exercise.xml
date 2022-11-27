@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:layout_marginHorizontal="20dp"
-    android:padding="10dp">
+    android:padding="7dp">
 
     <ImageView
         android:id="@+id/imageView"
@@ -29,7 +29,8 @@
         android:layout_marginTop="1dp"
         android:text="Title 1"
         android:textAlignment="center"
-        android:textSize="18sp"
+        android:textColor="#001D6E"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

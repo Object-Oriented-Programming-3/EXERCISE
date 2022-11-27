@@ -7,6 +7,34 @@
     android:layout_height="match_parent"
     tools:context=".EntryFragment">
 
+    <LinearLayout
+        android:id="@+id/linear_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/txt_welcome"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/myNickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#001D6E"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_appellation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="님"
+            android:textColor="#256FFF"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/txt_welcome"
         android:layout_width="wrap_content"
@@ -14,7 +42,7 @@
         android:layout_marginStart="40dp"
         android:text="환영합니다!"
         android:textColor="#256FFF"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,6 +56,7 @@
         android:layout_marginTop="80dp"
         android:layout_marginBottom="250dp"
         android:orientation="vertical"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,8 +68,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="&quot;다양한 운동을 찾아"
-            android:textColor="#393CA1"
-            android:textSize="28dp"
+            android:textColor="#256FFF"
+            android:textSize="28sp"
             android:textStyle="bold" />
 
         <TextView
@@ -50,8 +79,8 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:text="나만의 루틴을 만들고 "
-            android:textColor="#393CA1"
-            android:textSize="28dp"
+            android:textColor="#256FFF"
+            android:textSize="28sp"
             android:textStyle="bold" />
 
         <TextView
@@ -61,8 +90,8 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
             android:text="기록하며 운동해보세요.&quot;"
-            android:textColor="#393CA1"
-            android:textSize="28dp"
+            android:textColor="#256FFF"
+            android:textSize="28sp"
             android:textStyle="bold" />
 
 
@@ -71,19 +100,22 @@
     <Button
         android:id="@+id/btn_start"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginTop="60dp"
+        android:backgroundTint="#7FB5FF"
         android:text="운동 시작하기"
-        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="TextContrastCheck" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -95,6 +127,7 @@
             android:layout_height="100dp"
             android:layout_marginRight="40dp"
             android:layout_weight="1"
+            android:backgroundTint="#7FB5FF"
             android:text="운동 검색"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -105,6 +138,7 @@
             android:layout_width="130dp"
             android:layout_height="100dp"
             android:layout_weight="1"
+            android:backgroundTint="#7FB5FF"
             android:text="루틴 생성"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -116,38 +150,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="250dp"
         android:layout_marginBottom="100dp"
+        android:backgroundTint="#7FB5FF"
         android:text="Settings"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/myNickname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="270dp"
-        android:textColor="#256FFF"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txt_welcome"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.751"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="88dp"
-        android:textColor="#256FFF"
-        android:text="님"
-        android:textSize="25sp"
-        app:layout_constraintStart_toEndOf="@+id/myNickname"
         app:layout_constraintTop_toTopOf="parent" />
 
 

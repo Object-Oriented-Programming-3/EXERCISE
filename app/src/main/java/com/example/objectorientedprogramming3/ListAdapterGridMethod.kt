@@ -53,7 +53,7 @@ class ListAdapterGridMethod(private var firestore: FirebaseFirestore, var method
             binding.txtName.text = exercise.name
             Glide.with(binding.root)
                 .load(exercise.imageUrl)
-                .fitCenter()
+                .centerCrop()
                 .apply(RequestOptions().override(300, 300))
                 .into(binding.imageView)
 
