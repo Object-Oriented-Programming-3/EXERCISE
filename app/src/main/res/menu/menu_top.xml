@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/methodFragment"
+        android:icon="@drawable/ic_baseline_sports_24"
+        android:title="운동 시작하기" />
+    <item
+        android:id="@+id/searchResultFragment"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="운동 검색" />
+    <item
+        android:id="@+id/settingsFragment"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="설정" />
+</menu>
