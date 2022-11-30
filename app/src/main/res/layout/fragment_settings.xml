@@ -9,6 +9,7 @@
 
     <ImageView
         android:id="@+id/iv_profile"
+        android:src="@drawable/profile_img"
         android:layout_width="130dp"
         android:layout_height="114dp"
         android:layout_marginStart="16dp"
@@ -56,5 +57,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="SAVE"
+        app:layout_constraintBottom_toTopOf="@+id/btn_LogOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_profile" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

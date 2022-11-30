@@ -50,6 +50,9 @@ class EntryFragment : Fragment() {
         binding?.btnStart?.setOnClickListener{
             findNavController().navigate(R.id.action_entryFragment_to_methodFragment)
         }
+        binding?.btnRoutine?.setOnClickListener{
+            findNavController().navigate(R.id.action_entryFragment_to_timerFragment)
+        }
     }
     private fun getMyData(){
 
@@ -73,4 +76,5 @@ class EntryFragment : Fragment() {
         }
         FirebaseRef.userInfoRef.child(uid).addValueEventListener(postListener)
     }
+
 }
