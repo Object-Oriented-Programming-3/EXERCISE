@@ -6,6 +6,7 @@
         <entry key="..\:/Users/lg/AndroidStudioProjects/ObjectOrientedProgramming3/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2355" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/ObjectOrientedProgramming3/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.2355" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/ObjectOrientedProgramming3/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2355" />
+        <entry key="..\:/Users/lg/AndroidStudioProjects/ObjectOrientedProgramming3/app/src/main/res/layout/activity_alarm.xml" value="0.37135416666666665" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/ObjectOrientedProgramming3/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/ObjectOrientedProgramming3/app/src/main/res/layout/array.xml" value="0.1" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/ObjectOrientedProgramming3/app/src/main/res/layout/fragment_entry.xml" value="0.3016304347826087" />
@@ -15,8 +16,9 @@
         <entry key="..\:/Users/lg/AndroidStudioProjects/ObjectOrientedProgramming3/app/src/main/res/layout/fragment_routine.xml" value="0.2543640897755611" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/ObjectOrientedProgramming3/app/src/main/res/layout/fragment_search_detail.xml" value="0.33" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/ObjectOrientedProgramming3/app/src/main/res/layout/fragment_search_main.xml" value="0.33" />
-        <entry key="..\:/Users/lg/AndroidStudioProjects/ObjectOrientedProgramming3/app/src/main/res/layout/fragment_search_result.xml" value="0.19101123595505617" />
+        <entry key="..\:/Users/lg/AndroidStudioProjects/ObjectOrientedProgramming3/app/src/main/res/layout/fragment_search_result.xml" value="0.33" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/ObjectOrientedProgramming3/app/src/main/res/layout/fragment_settings.xml" value="0.37135416666666665" />
+        <entry key="..\:/Users/lg/AndroidStudioProjects/ObjectOrientedProgramming3/app/src/main/res/layout/fragment_sign_up.xml" value="0.21195652173913043" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/ObjectOrientedProgramming3/app/src/main/res/layout/fragment_timer.xml" value="0.32563405797101447" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/ObjectOrientedProgramming3/app/src/main/res/layout/list_exercise.xml" value="0.35789473684210527" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/ObjectOrientedProgramming3/app/src/main/res/menu/menu_top.xml" value="0.37135416666666665" />

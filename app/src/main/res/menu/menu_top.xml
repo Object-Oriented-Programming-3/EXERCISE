@@ -11,6 +11,10 @@
         android:icon="@drawable/ic_baseline_search_24"
         android:title="운동 검색" />
     <item
+        android:id="@+id/timerFragment"
+        android:icon="@drawable/ic_baseline_timer_24"
+        android:title="타이머" />
+    <item
         android:id="@+id/settingsFragment"
         android:icon="@drawable/ic_baseline_settings_24"
         android:title="설정" />

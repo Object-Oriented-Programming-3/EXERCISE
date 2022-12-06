@@ -44,13 +44,13 @@
         android:textColor="#256FFF"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintBottom_toTopOf="@+id/linear_search"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linear_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
@@ -109,10 +109,11 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linear_search"
         tools:ignore="TextContrastCheck" />
 
     <LinearLayout
+        android:id="@+id/linear_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -134,12 +135,12 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/btn_routine"
+            android:id="@+id/btn_timer"
             android:layout_width="130dp"
             android:layout_height="100dp"
             android:layout_weight="1"
             android:backgroundTint="#7FB5FF"
-            android:text="루틴 생성"
+            android:text="타이머"
             android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -152,7 +153,7 @@
         android:layout_marginBottom="100dp"
         android:backgroundTint="#7FB5FF"
         android:text="Settings"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintBottom_toTopOf="@+id/linear_search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

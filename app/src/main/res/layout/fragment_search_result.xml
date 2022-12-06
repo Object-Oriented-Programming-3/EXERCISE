@@ -7,6 +7,7 @@
     tools:context=".SearchMainFragment">
 
     <LinearLayout
+        android:id="@+id/linear_rec"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -37,7 +38,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
-            android:id="@+id/linearLayout"
+            android:id="@+id/linear_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
@@ -51,7 +52,8 @@
                 android:id="@+id/spinner"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:entries="@array/option" />
+                android:entries="@array/option"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <EditText
                 android:id="@+id/searchWord"
@@ -59,7 +61,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="검색어를 입력해주세요."
-                android:inputType="text" />
+                android:inputType="text"
+                android:textColorHint="#757575"
+                android:textSize="15sp"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <ImageButton
                 android:id="@+id/imageButton"
@@ -67,7 +72,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#FFFFFF"
-                app:srcCompat="@drawable/ic_baseline_search_24" />
+                app:srcCompat="@drawable/ic_baseline_search_24"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         </LinearLayout>
 
@@ -79,6 +85,6 @@
             android:layout_marginTop="30dp"
             app:layout_constraintTop_toBottomOf="@+id/txt_rec" />
 
-    </LinearLayout >
+    </LinearLayout>
 
 </FrameLayout>

@@ -47,10 +47,10 @@ tools:context=".SearchMainFragment">
     android:textStyle="bold"
     app:layout_constraintBottom_toTopOf="@+id/but_chest"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+    app:layout_constraintTop_toBottomOf="@+id/linear_search" />
 
 <LinearLayout
-    android:id="@+id/linearLayout"
+    android:id="@+id/linear_search"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="40dp"
@@ -89,7 +89,7 @@ tools:context=".SearchMainFragment">
     android:textColor="#2962FF"
     app:cornerRadius="10dp"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+    app:layout_constraintTop_toBottomOf="@+id/linear_search"
     app:strokeColor="@color/white" />
 
 <Button
@@ -132,7 +132,7 @@ tools:context=".SearchMainFragment">
     app:background="@android:color/transparent"
     app:cornerRadius="10dp"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+    app:layout_constraintTop_toBottomOf="@+id/linear_search" />
 
 <Button
     android:id="@+id/but_arm"

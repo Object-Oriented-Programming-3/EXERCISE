@@ -1,5 +1,6 @@
 package com.example.objectorientedprogramming3
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
@@ -13,6 +14,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
+import com.example.objectorientedprogramming3.alarm.AlarmActivity
 import com.example.objectorientedprogramming3.auth.UserDataModel
 import com.example.objectorientedprogramming3.databinding.FragmentSettingsBinding
 import com.example.objectorientedprogramming3.utils.FirebaseAuthUtils
@@ -67,6 +69,10 @@ class SettingsFragment : Fragment() {
         binding?.btnSave?.setOnClickListener {
 
             uploadImage(uid)
+        }
+        binding?.btnAlarm?.setOnClickListener {
+            val intent = Intent(context, AlarmActivity::class.java)
+            startActivity(intent)
         }
     }
 

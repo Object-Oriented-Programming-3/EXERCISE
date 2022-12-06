@@ -43,14 +43,16 @@ class EntryFragment : Fragment() {
             findNavController().navigate(R.id.action_entryFragment_to_settingsFragment)
         }
 
-
-        binding?.btnSearch?.setOnClickListener{
-            findNavController().navigate(R.id.action_entryFragment_to_searchResultFragment)
-        }
+        //'운동 시작하기' 버튼 클릭
         binding?.btnStart?.setOnClickListener{
             findNavController().navigate(R.id.action_entryFragment_to_methodFragment)
         }
-        binding?.btnRoutine?.setOnClickListener{
+        //'운동 검색' 버튼 클릭
+        binding?.btnSearch?.setOnClickListener{
+            findNavController().navigate(R.id.action_entryFragment_to_searchResultFragment)
+        }
+        //'타이머' 버튼 클릭
+        binding?.btnTimer?.setOnClickListener{
             findNavController().navigate(R.id.action_entryFragment_to_timerFragment)
         }
     }

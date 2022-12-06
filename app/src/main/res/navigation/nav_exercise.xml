@@ -105,6 +105,6 @@
     <fragment
         android:id="@+id/timerFragment"
         android:name="com.example.objectorientedprogramming3.TimerFragment"
-        android:label="fragment_timer"
+        android:label="운동 타이머"
         tools:layout="@layout/fragment_timer" />
 </navigation>
