@@ -8,7 +8,6 @@ import android.content.ContextWrapper
 import android.graphics.Color
 import android.os.Build
 import androidx.annotation.RequiresApi
-import androidx.core.app.NotificationChannelCompat
 import androidx.core.app.NotificationCompat
 import com.example.objectorientedprogramming3.R
 
@@ -45,7 +44,7 @@ class NotificationHelper(base: Context?) : ContextWrapper(base) {
         return NotificationCompat.Builder(applicationContext, channelID)
             .setContentTitle(time)
             .setContentText("운동할시간입니다!!!!")
-            .setSmallIcon(R.drawable.ic_launcher_background)
+            .setSmallIcon(R.drawable.img_background)
     }
 
 }

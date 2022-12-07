@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:background="@color/emphasis_blue"
-        android:text="안녕하세요 운동어플에 오신걸 환영합니다."
+        android:text="안녕하세요 FITGO에 오신걸 환영합니다."
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/ed_Id"

@@ -22,7 +22,7 @@
             android:id="@+id/iv_profile"
             android:layout_width="130dp"
             android:layout_height="114dp"
-            android:src="@drawable/profile_img">
+            android:src="@drawable/img_profile">
 
         </ImageView>
 

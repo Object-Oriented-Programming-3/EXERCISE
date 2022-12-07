@@ -75,7 +75,7 @@ tools:context=".SearchMainFragment">
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="#FFFFFF"
-        app:srcCompat="@drawable/ic_baseline_search_24" />
+        app:srcCompat="@drawable/img_search" />
 </LinearLayout>
 
 <Button
