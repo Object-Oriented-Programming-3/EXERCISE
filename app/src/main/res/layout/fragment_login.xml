@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:background="#F48C8C"
+        android:background="@color/emphasis_blue"
         android:text="안녕하세요 운동어플에 오신걸 환영합니다."
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -29,7 +29,7 @@
         android:layout_marginStart="120dp"
         android:layout_marginTop="220dp"
         android:layout_marginEnd="30dp"
-        android:backgroundTint="#F48C8C"
+        android:backgroundTint="@color/emphasis_blue"
         android:ems="10"
         android:hint="아이디"
         android:inputType="textPersonName"
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
         android:layout_marginEnd="30dp"
-        android:backgroundTint="#F48C8C"
+        android:backgroundTint="@color/emphasis_blue"
         android:ems="10"
         android:hint="패스워드"
         android:inputType="textPassword"
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="230dp"
-        android:background="#F48C8C"
+        android:background="@color/emphasis_blue"
         android:text="아이디"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -76,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="20dp"
-        android:background="#F48C8C"
+        android:background="@color/emphasis_blue"
         android:text="비밀번호"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -84,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_Id" />
 
     <LinearLayout
-        android:id="@+id/linear_search"
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
@@ -102,7 +102,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
-            android:backgroundTint="#F48C8C"
+            android:backgroundTint="@color/btn_blue"
             android:text="SignIn"
             android:textSize="16sp" />
 
@@ -113,7 +113,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
-            android:backgroundTint="#F48C8C"
+            android:backgroundTint="@color/btn_blue"
             android:text="SignUp"
             android:textSize="16sp" />
 
@@ -121,3 +121,4 @@
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

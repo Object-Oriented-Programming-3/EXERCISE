@@ -25,8 +25,6 @@ class SearchResultFragment : Fragment() {
     ): View? {
         binding = FragmentSearchResultBinding.inflate(layoutInflater)
         return binding?.root
-
-
     }
 
     //onCreateView에서 생성된 view가 인자로 전달(view가 완전히 생성된 상태)

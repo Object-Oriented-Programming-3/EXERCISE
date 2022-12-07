@@ -15,14 +15,14 @@ import com.example.objectorientedprogramming3.R
 class NotificationHelper(base: Context?) : ContextWrapper(base) {
     private val channelID = "channelID"
     private val channelNm = "channelNm"
-
+    // 안드로이드 버전이 오레오거나 이상이면 채널을 생성
     init {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
 
             createChannel()
         }
     }
-
+    // 채널생성 함수
     @RequiresApi(Build.VERSION_CODES.O)
     private fun createChannel(){
         var channel = NotificationChannel(channelID, channelNm, NotificationManager.IMPORTANCE_DEFAULT)
@@ -34,17 +34,17 @@ class NotificationHelper(base: Context?) : ContextWrapper(base) {
 
         getManager().createNotificationChannel(channel)
     }
-
+    // NotificationManager 생성
     fun getManager(): NotificationManager{
 
         return getSystemService(NOTIFICATION_SERVICE) as NotificationManager
     }
-
+    // Notification 설정
     fun getChannelNotification(time: String?) : NotificationCompat.Builder{
 
         return NotificationCompat.Builder(applicationContext, channelID)
             .setContentTitle(time)
-            .setContentText("운동합시다!.")
+            .setContentText("운동할시간입니다!!!!")
             .setSmallIcon(R.drawable.ic_launcher_background)
     }
 

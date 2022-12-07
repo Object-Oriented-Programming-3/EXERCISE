@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/entryFragment"
         android:name="com.example.objectorientedprogramming3.EntryFragment"
-        android:label="앱 시작 페이지"
+        android:label="FITGO"
         tools:layout="@layout/fragment_entry">
         <action
             android:id="@+id/action_entryFragment_to_loginFragment2"
@@ -26,11 +26,6 @@
             android:id="@+id/action_entryFragment_to_timerFragment"
             app:destination="@id/timerFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/searchMainFragment"
-        android:name="com.example.objectorientedprogramming3.SearchMainFragment"
-        android:label="fragment_search_main"
-        tools:layout="@layout/fragment_search_main" />
     <fragment
         android:id="@+id/searchResultFragment"
         android:name="com.example.objectorientedprogramming3.SearchResultFragment"
@@ -74,6 +69,9 @@
         <action
             android:id="@+id/action_settingsFragment_to_loginFragment2"
             app:destination="@id/loginFragment2" />
+        <action
+            android:id="@+id/action_settingsFragment_to_alarmActivity"
+            app:destination="@id/alarmActivity" />
     </fragment>
     <fragment
         android:id="@+id/listFragment"
@@ -107,4 +105,9 @@
         android:name="com.example.objectorientedprogramming3.TimerFragment"
         android:label="운동 타이머"
         tools:layout="@layout/fragment_timer" />
+    <activity
+        android:id="@+id/alarmActivity"
+        android:name="com.example.objectorientedprogramming3.alarm.AlarmActivity"
+        android:label="activity_alarm"
+        tools:layout="@layout/activity_alarm" />
 </navigation>
